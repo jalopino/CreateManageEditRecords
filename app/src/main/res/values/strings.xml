@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">databaseApp</string>
+    <string name="title_activity_create_new_customer">CreateNewCustomer</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="msg1">Hello!</string>
+    <string name="msg2">Yes</string>
+    <string name="msg3">No</string>
+    <string name="msg4">Edit the records of</string>
+    <string name="msg5">Record</string>
+    <string name="msg6">Name</string>
+    <string name="progress_detail"/>
+</resources>
