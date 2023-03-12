@@ -30,11 +30,11 @@ public class ManageRecords extends AppCompatActivity {
     TextView textView, txtDefault, txtDefault_gender, txtDefault_civilStatus, txtDefault_ID;
     private static EditText edtitemcode;
     private static JSONParser jsonParser = new JSONParser();
-    private static String urlHost = "";
-    private static String urlHostDelete = "";
-    private static String urlHostGender = "";
-    private static String urlHostCivilStatus = "";
-    private static String urlHostID = "";
+    private static String urlHost = "https://7d2b-49-145-174-8.ngrok.io/databasecon/SelectItemDetails.php";
+    private static String urlHostDelete = "https://7d2b-49-145-174-8.ngrok.io/databasecon/delete.php";
+    private static String urlHostGender = "https://7d2b-49-145-174-8.ngrok.io/databasecon/selectGender.php";
+    private static String urlHostCivilStatus = "https://7d2b-49-145-174-8.ngrok.io/databasecon/selectCivilStatus.php";
+    private static String urlHostID = "https://7d2b-49-145-174-8.ngrok.io/databasecon/selectid.php";
     private static String TAG_MESSAGE = "message", TAG_SUCCESS = "success";
     private static String online_dataset = "";
     private static String cItemcode = "";
@@ -68,14 +68,16 @@ public class ManageRecords extends AppCompatActivity {
         edtitemcode = (EditText) findViewById(R.id.edtitemcode);
         txtDefault = (TextView) findViewById(R.id.tv_default);
         listView = (ListView) findViewById(R.id.listview);
-        textView = (TextView) findViewById(R.id.textViews);
+        textView = (TextView) findViewById(R.id.textView4);
         txtDefault_gender = (TextView) findViewById(R.id.txt_gender);
         txtDefault_civilStatus = (TextView) findViewById(R.id.txt_civilStatus);
         txtDefault_ID = (TextView) findViewById(R.id.txt_ID);
+
         txtDefault.setVisibility(View.GONE);
         txtDefault_gender.setVisibility(View.GONE);
         txtDefault_civilStatus.setVisibility(View.GONE);
         txtDefault_ID.setVisibility(View.GONE);
+
         Toast.makeText(ManageRecords.this, "Nothing Selected", Toast.LENGTH_SHORT).show();
 
         btnQuery.setOnClickListener(new View.OnClickListener() {
@@ -428,8 +430,8 @@ public class ManageRecords extends AppCompatActivity {
                         int nSuccess;
                         try {
                             ContentValues cv = new ContentValues();
-                            cPostSQL = cItemcode;
-                            cv.put("code", cPostSQL);
+                            cPostSQL = cItemSelected_ID;
+                            cv.put("id", cPostSQL);
                             JSONObject json = jsonParser.makeHTTPRequest(urlHostDelete, "POST", cv);
                             if (json != null) {
                                 nSuccess = json.getInt(TAG_SUCCESS);

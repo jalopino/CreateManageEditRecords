@@ -23,7 +23,7 @@ public class CreateNewCustomer extends AppCompatActivity {
     private static Button btnQuery;
     private static EditText edtitemcode;
     private static JSONParser jParser = new JSONParser();
-    private static String urlHost = "http://25.40.159.253/databasecon/insert.php";
+    private static String urlHost = "https://7d2b-49-145-174-8.ngrok.io/databasecon/insert.php";
     private static String TAG_MESSAGE = "message" , TAG_SUCCESS = "success";
     private static String online_dataset = "";
     private static String fullname = "";

@@ -14,5 +14,5 @@
     <string name="msg4">Edit the records of</string>
     <string name="msg5">Record</string>
     <string name="msg6">Name</string>
-    <string name="progress_detail"/>
+    <string name="progress_detail" />
 </resources>
